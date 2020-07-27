@@ -1,0 +1,27 @@
+
+<!doctype html>
+<html lang="zh" dir="ltr">
+<!-- Copyright 2015 The Chromium Authors. All rights reserved.
+     Use of this source code is governed by a BSD-style license that can be
+     found in the LICENSE file. -->
+<head>
+ 
+</head>
+<body>
+    <div>test</div>
+<script>
+    /**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
+ */
+ var isPalindrome = function(x) {
+    if(typeof x!='number') return 
+    const reverseValue=x.toString().split("").reverse().join("");
+    return x==reverseValue;
+};
+const test=isPalindrome(-121);
+console.log('test',test);
+</script>
+</body>
+</html>
