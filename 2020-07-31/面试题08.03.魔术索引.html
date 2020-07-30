@@ -1,0 +1,30 @@
+
+<!doctype html>
+<html lang="zh" dir="ltr">
+<!-- Copyright 2015 The Chromium Authors. All rights reserved.
+     Use of this source code is governed by a BSD-style license that can be
+     found in the LICENSE file. -->
+<head>
+ 
+</head>
+<body>
+    <div>你是最棒的</div>
+<script>
+/**
+ * @param {number} n
+ * @return {number}
+ */
+ var integerBreak = function(n) {
+     var half=Math.ceil(n/2);
+     const arr=[];
+    for(var i=0;i<=half;i++){
+        const temp=n-i;
+        arr.push(i*temp);
+    }
+  
+    return Math.max(...arr)
+};
+alert(integerBreak(10));
+</script>
+</body>
+</html>

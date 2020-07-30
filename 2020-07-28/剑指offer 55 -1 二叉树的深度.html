@@ -1,0 +1,42 @@
+
+<!doctype html>
+<html lang="zh" dir="ltr">
+<!-- Copyright 2015 The Chromium Authors. All rights reserved.
+     Use of this source code is governed by a BSD-style license that can be
+     found in the LICENSE file. -->
+<head>
+ 
+</head>
+<body>
+    <div>你是最棒的</div>
+<script>
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val) {
+ *     this.val = val;
+ *     this.left = this.right = null;
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {number}
+ */
+ var maxDepth = function(root) {
+  if(!root) return 0
+    let max = 0
+    function deepFun(node,d){
+        if(!node.left&&!node.right){
+            if(max<d+1) max = d+1
+        }
+        if(node.left) deepFun(node.left,d+1)
+        if(node.right) deepFun(node.right,d+1)
+    }
+    deepFun(root,0)
+    return max
+};
+const test=[3,9,20,null,null,15,7,1,3];
+const result=maxDepth(test);
+console.log(result);
+</script>
+</body>
+</html>
